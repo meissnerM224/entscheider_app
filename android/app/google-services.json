@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "676956156660",
+    "project_id": "entscheider-app",
+    "storage_bucket": "entscheider-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676956156660:android:fe41c00d1ce3ff9ecee4a1",
+        "android_client_info": {
+          "package_name": "com.example.entscheider_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaKf3n2JDjtbuEsq8Ipo_kgOCQ6casHxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
