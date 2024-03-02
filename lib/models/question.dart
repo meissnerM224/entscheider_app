@@ -7,9 +7,15 @@ class Question {
 
   Map<String, dynamic> toJson() => {
         'answer': answer,
-        'created': created,
+        'created': created?.toIso8601String(),
         'query': query,
       };
+
+  Question.fromSnapshot(snapshot)
+      : answer = snapshot.data()['answer'],
+        created = DateTime.tryParse(snapshot.data()['created']),
+        query = snapshot.data()['query'];
+
   Question copyWith({
     String? answer,
     DateTime? created,
