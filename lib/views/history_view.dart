@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:entscheider_app/models/question.dart';
 import 'package:entscheider_app/services/auth_service.dart';
