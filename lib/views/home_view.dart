@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:entscheider_app/extensions/string_extension.dart';
 import 'package:entscheider_app/models/question.dart';
+import 'package:entscheider_app/routes/app_router.dart';
 import 'package:entscheider_app/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,7 @@ class _HomeViewState extends State<HomeView> {
   final TextEditingController _askController = TextEditingController();
   String _answer = '';
   bool _askBTNActive = false;
+
   @override
   void initState() {
     super.initState();
@@ -42,7 +44,8 @@ class _HomeViewState extends State<HomeView> {
             Padding(
               padding: const EdgeInsets.only(right: 20.0),
               child: GestureDetector(
-                onTap: () => log.log('Click auf History'),
+                onTap: () =>
+                    Navigator.of(context).pushNamed(AppRouter.historyScreen),
                 child: const Icon(Icons.history),
               ),
             )
@@ -73,7 +76,7 @@ class _HomeViewState extends State<HomeView> {
     return Column(
       children: [
         Text(
-          'Sollte ich?',
+          'Sollte ich...',
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         Padding(
@@ -111,7 +114,7 @@ class _HomeViewState extends State<HomeView> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 20.0),
-                child: Text('Sollte ich ${_askController.text.capytalize()} ?'),
+                child: Text('Sollte ich ${_askController.text.capytalize()}'),
               ),
               Text(
                 _answer.capytalize(),
