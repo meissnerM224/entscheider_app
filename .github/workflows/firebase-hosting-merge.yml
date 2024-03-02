@@ -12,9 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          flutter config --enable-qwb
-          flutter pub get
-          flutter build web --release
+         npm ci && npm build web
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
